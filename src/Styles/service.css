@@ -1,0 +1,7 @@
+/* src/components/Service.css */
+
+.service-image {
+    width: 100%; /* Makes the image fill the width of the card */
+    height: 400px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
