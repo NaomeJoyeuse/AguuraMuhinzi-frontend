@@ -16,9 +16,10 @@ const Land = () => {
       data-testid="land"
       css={{
         position: 'relative',
-        padding: '$2 $10', // Ensure this is formatted correctly for your CSS-in-JS solution
+        padding: '$8 $10',
+        width: '150vw', // Ensure this is formatted correctly for your CSS-in-JS solution
         '@bp1': {
-          padding: '$2 $3',
+          padding: '$9 $10',
         },
         '@bp2': {
           padding: '$2 $5',
@@ -28,7 +29,8 @@ const Land = () => {
         },
       }}
     >
-
+  <Flex css={{ imgBg: '' }} />
+  <Flex css={{ meshBg: '' }} />
       <Nav />
       <Main />
       <section id="services">

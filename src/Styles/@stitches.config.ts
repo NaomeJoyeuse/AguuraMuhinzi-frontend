@@ -310,7 +310,9 @@ export const {
             backgroundSize:"cover",
             opacity:"100%",
             position:"absolute",
-            left:0,
+            right:0,
+            Left:0,
+            overflow:"hidden",
             top:0,
 
             '@media (max-width: 768px)': { // Adjust this breakpoint as necessary
