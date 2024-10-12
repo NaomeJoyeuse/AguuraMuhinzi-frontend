@@ -303,7 +303,7 @@ export const {
         
         "imgBg":()=>({
             width:"100%",
-            height:"290vh",
+            height:"287vh",
             backgroundImage: "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)",
             backgroundPosition:"center",
             backgroundOrigin:"content-box",
