@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import IcoPlant from '../asesst/Icons/Ico_plant.tsx'; // Adjust the path as necessary
 
 const Login: React.FC = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -15,7 +15,11 @@ const Login: React.FC = () => {
 
   const handleSignUp = () => {
     navigate('/signup'); 
-  }
+  };
+
+  const handleLogoClick = () => {
+    navigate('/'); // Navigate to the landing page
+  };
 
   return (
     <section className="p-3 p-md-5" style={{ minHeight: '100vh' }}>
@@ -24,7 +28,7 @@ const Login: React.FC = () => {
           <div className="row g-0">
             <div className="col-12 col-md-6">
               <div className="card-body p-3 p-md-4" style={{ marginTop: '30px' }}>
-                <div className="d-flex align-items-center mb-4">
+                <div className="d-flex align-items-center mb-4" onClick={handleLogoClick} style={{ cursor: 'pointer' }}>
                   <IcoPlant width="35" height="35" />
                   <span className="navbar-brand ms-2" style={{ fontWeight: '600', fontSize: '1.5rem' }}>AguuraMuhinzi</span>
                 </div>
@@ -59,7 +63,7 @@ const Login: React.FC = () => {
                   </div>
                 </form>
                 <div className="mt-3">
-                <p className="m-0 text-secondary text-center">
+                  <p className="m-0 text-secondary text-center">
                     Don't have an account? 
                     <button onClick={handleSignUp} className="link-primary text-decoration-none" style={{ background: 'none', border: 'none', padding: 0 }}>
                       Sign up
@@ -69,7 +73,7 @@ const Login: React.FC = () => {
               </div>
             </div>
             <div className="col-12 col-md-6" style={{ backgroundImage: 'url(woman.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '70vh', width: '50%' }}>
-             
+              {/* Background Image */}
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import IcoPlant from '../asesst/Icons/Ico_plant.tsx'; 
 
 const Registration: React.FC = () => {
     const navigate = useNavigate(); 
@@ -44,7 +45,10 @@ const Registration: React.FC = () => {
   const handleSignIn = () => {
     navigate('/login'); // Navigate to the login page
   };
-
+  const handleLogoClick = () => {
+    navigate('/'); // Replace with your desired path
+  };
+  
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -56,16 +60,22 @@ const Registration: React.FC = () => {
       <div className="container">
         <div className="card border-light shadow-sm">
           <div className="row g-0">
-            <div className="col-12 col-md-6" style={{ backgroundColor: '#395B28' }}>
-              <div className="d-flex align-items-center justify-content-center h-100">
-                <div className="col-10 col-xl-8 py-3 text-center text-white">
-                  <h2 className="h1 mb-4">Connect with Buyers, Grow Your Business</h2>
-                  <p className="lead m-0">
-                    AGRI-LINK helps you sell your crops directly to buyers, increasing your income and reducing reliance on middlemen.
-                  </p>
-                </div>
-              </div>
-            </div>
+          
+          <div className="col-12 col-md-6" style={{ backgroundColor: '#395B28', position: 'relative' }}>
+  <div className="d-flex align-items-start" style={{ position: 'absolute', top: '25px', left: '20px', cursor: 'pointer' }} onClick={handleLogoClick}>
+    <IcoPlant width="35" height="35" />
+    <span className="navbar-brand ms-2" style={{ fontWeight: '600', fontSize: '1.5rem' }}>AguuraMuhinzi</span>
+  </div>
+  <div className="d-flex align-items-center justify-content-center h-100">
+    <div className="col-10 col-xl-8 py-3 text-center text-white">
+      <h2 className="h1 mb-4" style={{ marginTop: '70px' }}>Connect with Buyers, Grow Your Business</h2>
+      <p className="lead m-0">
+        AguuraMuhizi helps you sell your crops directly to buyers, increasing your income and reducing reliance on middlemen.
+      </p>
+    </div>
+  </div>
+</div>
+
             <div className="col-12 col-md-6">
               <div className="card-body p-3 p-md-4 p-xl-5">
                 <div className="row">
@@ -98,7 +108,7 @@ const Registration: React.FC = () => {
                         <input type="password" className="form-control" name="confirmPassword" id="confirmPassword" required onChange={handleChange} />
                       </div>
                       <div className="col-12">
-                        <label className="form-label">User Type <span className="text-danger">*</span></label>
+                        <label className="form-label">Who you are <span className="text-danger">*</span></label>
                         <div className="d-flex flex-row">
                           <div className="form-check me-3">
                             <input className="form-check-input" type="radio" name="userType" id="farmer" value="farmer" required onChange={handleUserTypeChange} />
@@ -219,8 +229,6 @@ const Registration: React.FC = () => {
     </button>
   </p>
 </div>
-
-                  
                 </div>
               </div>
             </div>
