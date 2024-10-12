@@ -4,9 +4,8 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Flex from './Styles/styledComponent/Flex.ts';
 import globalStyle from './Styles/globalCss.ts';
 import Land from './land.js';
-import Service from './components/service.js';
 import About from './components/about.js';
-import Footer from './components/footer.tsx';
+
 
 function App() {
   globalStyle(); // Apply global styles

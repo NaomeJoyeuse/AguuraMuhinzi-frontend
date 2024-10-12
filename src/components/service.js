@@ -1,8 +1,8 @@
-// src/components/Service.js
+
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Styles/service.css'; // Import the CSS file
-import Flex from '../Styles/styledComponent/Flex.ts';
+
 
 function Service() {
     return (
