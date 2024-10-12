@@ -14,9 +14,7 @@ function Main() {
         navigate("/signup"); 
     };
 
-    const handleJoinLogin = () => {
-        navigate("/login"); 
-    };
+  
     const handleBrowseProducts = () => {
         navigate("/selling"); // Navigate to the selling page
     };
