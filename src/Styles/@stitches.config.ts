@@ -315,8 +315,8 @@ export const {
             overflow:"hidden",
             top:0,
 
-            '@media (max-width: 768px)': { // Adjust this breakpoint as necessary
-            height: "470vh", // Height for smaller screens
+            '@media (max-width: 768px)': { 
+            height: "470vh", 
         },
         }),
         "meshBg":()=>({

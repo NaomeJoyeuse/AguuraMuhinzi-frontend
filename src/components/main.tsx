@@ -14,6 +14,10 @@ function Main() {
         navigate("/signup"); // Navigate to the signup page
     };
 
+    const handleBrowseProducts = () => {
+        navigate("/selling"); // Navigate to the selling page
+    };
+
     return (
         <Flex 
             dir={"column"} 
@@ -81,23 +85,27 @@ function Main() {
                 >
                     Join Our Community
                 </Text>
-                <Text cursor={"click"} css={{
-                    border: "1px solid $primary",
-                    color: "$primary",
-                    backgroundColor: "$primary200",
-                    headline6: "600",
-                    padding: "$1 $3",
-                    borderRadius: "8px",
-                    marginLeft: "$3",
-                    "&:hover": {
+                <Text 
+                    cursor={"click"} 
+                    css={{
+                        border: "1px solid $primary",
                         color: "$primary",
-                        backgroundColor: "$primary600",
-                    },
-                    "&:active": {
-                        boxShadow: "none",
-                        color: "$onPrimary",
-                    }
-                }}>
+                        backgroundColor: "$primary200",
+                        headline6: "600",
+                        padding: "$1 $3",
+                        borderRadius: "8px",
+                        marginLeft: "$3",
+                        "&:hover": {
+                            color: "$primary",
+                            backgroundColor: "$primary600",
+                        },
+                        "&:active": {
+                            boxShadow: "none",
+                            color: "$onPrimary",
+                        }
+                    }}
+                    onClick={handleBrowseProducts} // Add onClick handler
+                >
                     Browse Our Products
                 </Text>
             </Flex>
