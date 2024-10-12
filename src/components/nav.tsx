@@ -25,6 +25,10 @@ function Nav() {
     }, 0);
   };
 
+  const handleLogin = () => {
+    navigate('/login');
+  };
+
   return (
     <nav className="navbar navbar-expand-lg" style={{ width: '100%', backgroundColor: 'transparent', marginTop: '-70px' }}>
       <div className="container-fluid">
@@ -61,7 +65,9 @@ function Nav() {
               <Link className="nav-link" to="/about" style={{ fontWeight: '700', color: 'white', fontSize: '1.2rem' }}>About</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/login" style={{ fontWeight: '700', color: 'white', fontSize: '1.2rem' }}>Login</Link>
+              <button className="nav-link btn" style={{ fontWeight: '700', color: 'white', fontSize: '1.2rem', background: 'transparent', border: 'none' }} onClick={handleLogin}>
+                Login
+              </button>
             </li>
           </ul>
         </div>

@@ -5,6 +5,7 @@ import globalStyle from './Styles/globalCss.ts';
 import Land from './land.js';
 import About from './components/about.js';
 import Signup from './screens/signup.tsx';
+import Login from './screens/login.tsx';
 
 function App() {
   globalStyle(); // Apply global styles
@@ -47,6 +48,7 @@ function App() {
           <Route path="/" element={<Land />} /> 
           <Route path="/about" element={<About />} /> 
           <Route path="/signup" element={<Signup />} /> 
+          <Route path='/login' element={<Login />} />
         </Routes>
         {/* <Footer /> */}
       </Flex>
