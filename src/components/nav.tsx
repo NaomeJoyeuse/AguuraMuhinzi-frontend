@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Ico_Plant from "../asesst/Icons/Ico_plant.tsx";
+import IcoPlant from "../asesst/Icons/Ico_plant.tsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -29,7 +29,7 @@ function Nav() {
     <nav className="navbar navbar-expand-lg" style={{ width: '100%', backgroundColor: 'transparent', marginTop: '-70px' }}>
       <div className="container-fluid">
         <div className="d-flex align-items-center" style={{ cursor: 'pointer' }}>
-          <Ico_Plant width="35" height="35" />
+          <IcoPlant width="35" height="35" />
           <span className="navbar-brand" style={{ fontWeight: '600', fontSize: '1.5rem' }}>AguuraMuhinzi</span>
         </div>
         <button

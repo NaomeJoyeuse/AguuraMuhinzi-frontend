@@ -1,7 +1,7 @@
 import React from "react";
-import Ico_Facebook from "../asesst/Icons/Ico_facebook.tsx";
-import Ico_Instagram from "../asesst/Icons/Ico_instagram.tsx";
-import Ico_Twitter from "../asesst/Icons/Ico_twitter.tsx";
+import IcoFacebook from "../asesst/Icons/Ico_facebook.tsx";
+import IcoInstagram from "../asesst/Icons/Ico_instagram.tsx";
+import IcoTwitter from "../asesst/Icons/Ico_twitter.tsx";
 import { fadein } from "../Styles/keyframes.tsx";
 import Flex from "../Styles/styledComponent/Flex.ts";
 import Text from "../Styles/styledComponent/Text.ts";
@@ -116,9 +116,9 @@ function Main(){
                 }
             }
         }}>
-            <Ico_Facebook width="32" height="32" />
-            <Ico_Instagram width="32" height="32" />
-            <Ico_Twitter width="32" height="32" />
+            <IcoFacebook width="32" height="32" />
+            <IcoInstagram width="32" height="32" />
+            <IcoTwitter width="32" height="32" />
         </Flex>
         {/* <Service /> */}
     </Flex>
