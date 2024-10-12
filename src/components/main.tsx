@@ -11,9 +11,12 @@ function Main() {
     const navigate = useNavigate(); // Initialize useNavigate
 
     const handleJoinCommunity = () => {
-        navigate("/signup"); // Navigate to the signup page
+        navigate("/signup"); 
     };
 
+    const handleJoinLogin = () => {
+        navigate("/login"); 
+    };
     const handleBrowseProducts = () => {
         navigate("/selling"); // Navigate to the selling page
     };

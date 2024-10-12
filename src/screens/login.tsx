@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useNavigate } from 'react-router-dom';
 import IcoPlant from '../asesst/Icons/Ico_plant.tsx'; // Adjust the path as necessary
 
 const Login: React.FC = () => {
+    const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -10,6 +12,10 @@ const Login: React.FC = () => {
     e.preventDefault();
     console.log('Login data submitted:', { email, password });
   };
+
+  const handleSignUp = () => {
+    navigate('/signup'); 
+  }
 
   return (
     <section className="p-3 p-md-5" style={{ minHeight: '100vh' }}>
@@ -53,12 +59,17 @@ const Login: React.FC = () => {
                   </div>
                 </form>
                 <div className="mt-3">
-                  <p className="m-0 text-secondary text-center">Don't have an account? <a href="#!" className="link-primary text-decoration-none">Sign up</a></p>
+                <p className="m-0 text-secondary text-center">
+                    Don't have an account? 
+                    <button onClick={handleSignUp} className="link-primary text-decoration-none" style={{ background: 'none', border: 'none', padding: 0 }}>
+                      Sign up
+                    </button>
+                  </p>
                 </div>
               </div>
             </div>
             <div className="col-12 col-md-6" style={{ backgroundImage: 'url(woman.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '70vh', width: '50%' }}>
-              {/* Increased width to 50% */}
+             
             </div>
           </div>
         </div>

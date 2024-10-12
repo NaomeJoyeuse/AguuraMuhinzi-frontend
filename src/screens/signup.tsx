@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Registration: React.FC = () => {
+    const navigate = useNavigate(); 
   const [step, setStep] = useState(1);
   const [userType, setUserType] = useState('');
   const [formData, setFormData] = useState({
@@ -39,7 +41,11 @@ const Registration: React.FC = () => {
   const handleBack = () => {
     setStep(1);
   };
+  const handleSignIn = () => {
+    navigate('/login'); // Navigate to the login page
+  };
 
+  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form data submitted:', formData);
@@ -204,10 +210,17 @@ const Registration: React.FC = () => {
                   </div>
                 )}
                 <div className="row mt-4">
-                  <div className="col-12">
-                    <hr className="mt-5 mb-4 border-secondary-subtle" />
-                    <p className="m-0 text-secondary text-center">Already have an account? <a href="#!" className="link-primary text-decoration-none">Sign in</a></p>
-                  </div>
+                <div className="col-12">
+  <hr className="mt-5 mb-4 border-secondary-subtle" />
+  <p className="m-0 text-secondary text-center">
+    Already have an account? 
+    <button onClick={handleSignIn} className="link-primary text-decoration-none" style={{ background: 'none', border: 'none', padding: 0 }}>
+      Sign in
+    </button>
+  </p>
+</div>
+
+                  
                 </div>
               </div>
             </div>
